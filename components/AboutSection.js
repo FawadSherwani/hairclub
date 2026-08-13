@@ -8,8 +8,8 @@ export default function AboutSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-20 lg:py-24 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
         <div className="relative aspect-[5/4] rounded-2xl bg-sand overflow-hidden">
           <Image
-            src="https://picsum.photos/seed/hhc-team/800/640"
-            alt="Clinic team at work"
+            src="/3.jpg"
+            alt="Natural-looking men's hair system"
             fill
             sizes="(max-width: 1024px) 100vw, 45vw"
             className="object-cover"

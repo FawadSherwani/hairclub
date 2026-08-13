@@ -15,8 +15,8 @@ export default function ServicesPage() {
     <>
       <section className="relative overflow-hidden bg-pine text-paper">
         <Image
-          src="https://picsum.photos/seed/hhc-services/1600/700"
-          alt="Hair & Hair Club clinic procedure room"
+          src="/5.jpg"
+          alt="Premium lace-front hair system"
           fill
           sizes="100vw"
           className="object-cover opacity-25 mix-blend-luminosity"

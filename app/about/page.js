@@ -43,8 +43,8 @@ export default function AboutPage() {
     <>
       <section className="relative overflow-hidden bg-pine text-paper">
         <Image
-          src="https://picsum.photos/seed/hhc-about/1600/700"
-          alt="Hair & Hair Club clinic"
+          src="/4.jpg"
+          alt="Close-up of a lace hair system base"
           fill
           sizes="100vw"
           className="object-cover opacity-25 mix-blend-luminosity"

@@ -2,9 +2,9 @@ import Link from "next/link";
 import BeforeAfterCard from "./BeforeAfterCard";
 
 const PREVIEW = [
-  { label: "Hairline restoration", category: "FUE · 2,800 grafts", grafts: "8 mo" },
-  { label: "Crown coverage", category: "DHI · 3,400 grafts", grafts: "10 mo" },
-  { label: "Beard density", category: "FUE · 1,100 grafts", grafts: "6 mo" },
+  { label: "Natural lace base", category: "Breathable lace construction", grafts: "Lace", image: "/6.jpg" },
+  { label: "Secure perimeter system", category: "Reinforced bonding zones", grafts: "Hybrid", image: "/7.jpg" },
+  { label: "Full lace hair system", category: "Natural movement and coverage", grafts: "Full lace", image: "/8.jpg" },
 ];
 
 export default function GalleryPreview() {
