@@ -5,16 +5,17 @@ import BeforeAfterCard from "@/components/BeforeAfterCard";
 import CTASection from "@/components/CTASection";
 
 const RESULTS = [
-  { label: "Natural front hairline", tag: "Lace front", category: "Fine lace edge", grafts: "Front", image: "/2.jpg" },
-  { label: "Classic men's hair system", tag: "Full system", category: "Balanced all-over density", grafts: "Full", image: "/3.jpg" },
-  { label: "Fine mesh base", tag: "Full system", category: "Lightweight breathable construction", grafts: "Mesh", image: "/4.jpg" },
-  { label: "MGM lace-front system", tag: "Lace front", category: "Natural front with reinforced edge", grafts: "Lace", image: "/5.jpg" },
-  { label: "Contour lace base", tag: "Lace front", category: "Flexible scalp-hugging fit", grafts: "Lace", image: "/6.jpg" },
-  { label: "Secure perimeter system", tag: "Hybrid", category: "Reinforced bonding zones", grafts: "Hybrid", image: "/7.jpg" },
-  { label: "Full lace system", tag: "Full system", category: "Natural movement and coverage", grafts: "Full lace", image: "/8.jpg" },
+  { label: "Hairline restoration", tag: "Hairline", category: "FUE · 2,800 grafts", grafts: "8 mo" },
+  { label: "Frontal density boost", tag: "Hairline", category: "DHI · 2,200 grafts", grafts: "12 mo" },
+  { label: "Crown coverage", tag: "Crown", category: "DHI · 3,400 grafts", grafts: "10 mo" },
+  { label: "Vertex thinning correction", tag: "Crown", category: "FUE · 3,900 grafts", grafts: "14 mo" },
+  { label: "Beard density", tag: "Beard", category: "FUE · 1,100 grafts", grafts: "6 mo" },
+  { label: "Full beard restoration", tag: "Beard", category: "FUE · 1,800 grafts", grafts: "9 mo" },
+  { label: "Eyebrow reconstruction", tag: "Eyebrow", category: "FUE · 340 grafts", grafts: "7 mo" },
+  { label: "Full scalp coverage", tag: "Full scalp", category: "DHI · 5,200 grafts", grafts: "16 mo" },
 ];
 
-const TABS = ["All", "Lace front", "Full system", "Hybrid"];
+const TABS = ["All", "Hairline", "Crown", "Beard", "Eyebrow", "Full scalp"];
 
 export default function GalleryPage() {
   const [tab, setTab] = useState("All");
@@ -28,11 +29,11 @@ export default function GalleryPage() {
             Results
           </p>
           <h1 className="font-display text-4xl sm:text-5xl text-ink max-w-2xl text-balance">
-            Hair systems, organized by construction
+            Outcomes, organized by area
           </h1>
           <p className="mt-6 text-clay max-w-xl">
-            Explore our available base designs, hairline finishes and attachment
-            options to find the right balance of comfort and realism.
+            Each result is shown against the graft count and time since
+            surgery, since density fills in gradually over 8–14 months.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-2">
