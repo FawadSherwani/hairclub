@@ -8,7 +8,7 @@ const LOCATIONS = [
   {
     city: "Faisalabad",
     address: "Near McDonald's, Salami Chowk, Satiana Road, Faisalabad",
-    phone: "0300-0000003",
+    phone: "0305-7679198",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function ContactPage() {
                     Message sent
                   </h3>
                   <p className="text-sm text-clay">
-                    We'll reply within one business day. Prefer to talk sooner?
+                    We&apos;ll reply within one business day. Prefer to talk sooner?
                   </p>
                   <button
                     onClick={() => openBooking()}
@@ -92,10 +92,6 @@ export default function ContactPage() {
                       <span className="text-xs font-medium text-ink/70">Preferred date &amp; time</span>
                       <DateTimeField />
                     </label>
-                    <label className="flex flex-col gap-1.5">
-                    <span className="text-xs font-medium text-ink/70">Message</span>
-                    <textarea required rows={5} className="contact-input resize-none" placeholder="How can we help?" />
-                  </label>
                   </div>
                   <button
                     type="submit"
