@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #14181b;
+  --color-pine: #1f3d33;
+  --color-pine-light: #2f5647;
+  --color-pine-dark: #142822;
+  --color-sand: #ede6d9;
+  --color-paper: #faf8f4;
+  --color-copper: #b8863f;
+  --color-copper-light: #d4a75f;
+  --color-clay: #6b6459;
+  --color-line: #ddd3c2;
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-pine: var(--color-pine);
+  --color-pine-light: var(--color-pine-light);
+  --color-pine-dark: var(--color-pine-dark);
+  --color-sand: var(--color-sand);
+  --color-paper: var(--color-paper);
+  --color-copper: var(--color-copper);
+  --color-copper-light: var(--color-copper-light);
+  --color-clay: var(--color-clay);
+  --color-line: var(--color-line);
+
+  --font-display: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--color-copper);
+  color: var(--color-paper);
+}
