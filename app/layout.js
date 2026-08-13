@@ -14,6 +14,7 @@ import { BookingProvider } from "@/lib/booking-context";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BookingModal from "@/components/BookingModal";
+import ContactDock from "@/components/ContactDock";
 
 export const metadata = {
   title: "Hair & Hair Club — Precision-Mapped FUE & DHI",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
           <main className="pt-20">{children}</main>
           <Footer />
           <BookingModal />
+          <ContactDock />
         </BookingProvider>
       </body>
     </html>
