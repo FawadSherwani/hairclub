@@ -49,7 +49,7 @@ export default function Footer() {
 
       <div className="border-t border-paper/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-5 text-xs text-paper/50 sm:flex-row sm:items-center sm:justify-between lg:px-10">
-          <p>© {new Date().getFullYear()} Hair &amp; Hair Club. All rights reserved.Develop by </p>
+          <p>© {new Date().getFullYear()} Hair &amp; Hair Club. All rights reserved.Develop by AZWEBSOFT</p>
           <p>Faisalabad, Pakistan</p>
         </div>
       </div>
