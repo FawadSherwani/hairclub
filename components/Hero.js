@@ -62,11 +62,11 @@ export default function Hero() {
 
         <div className="relative aspect-[4/5] rounded-[2rem] bg-pine overflow-hidden">
           <Image
-            src="https://picsum.photos/seed/hhc-clinic/900/1100"
+            src="/2.jpg"
             alt="Clinic consultation room"
             fill
             sizes="(max-width: 1024px) 100vw, 45vw"
-            className="object-cover opacity-70 mix-blend-luminosity"
+            className="object-cover opacity-50 mix-blend-luminosity"
             priority
           />
           <div className="absolute inset-0 bg-pine/55" />
