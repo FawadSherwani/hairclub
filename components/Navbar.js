@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useBooking } from "@/lib/booking-context";
 
@@ -32,15 +31,10 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-20">
-        <Link href="/" className="flex items-center" aria-label="Hair & Hair Club home">
-          <Image
-            src="/logo.png"
-            alt="Hair & Hair Club"
-            width={64}
-            height={64}
-            className="h-16 w-16 object-contain"
-            priority
-          />
+        <Link href="/" className="flex items-center gap-2 group">
+          <span className="font-display text-2xl tracking-tight text-pine">
+            Hair & Hair Club
+          </span>
         </Link>
 
         <div className="hidden md:flex items-center gap-10">
