@@ -53,6 +53,12 @@ body {
   text-wrap: balance;
 }
 
+/* Skip layout and paint work for sections until they approach the viewport. */
+main > section:not(:first-child) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
 ::selection {
   background: var(--color-copper);
   color: var(--color-paper);
