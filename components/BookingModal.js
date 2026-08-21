@@ -79,6 +79,16 @@ export default function BookingModal() {
         onClick={handleClose}
       />
 
+      <div className="booking-papers" aria-hidden="true">
+        {Array.from({ length: 7 }, (_, index) => (
+          <span key={index} className={`booking-paper booking-paper-${index + 1}`}>
+            <i />
+            <i />
+            <i />
+          </span>
+        ))}
+      </div>
+
       <div className="relative w-full sm:max-w-lg bg-paper rounded-t-3xl sm:rounded-3xl shadow-2xl max-h-[92vh] overflow-y-auto">
         <div className="sticky top-0 bg-paper flex items-start justify-between px-6 sm:px-8 pt-7 pb-4 border-b border-line">
           <div>
@@ -210,6 +220,63 @@ export default function BookingModal() {
         }
         .input:focus {
           border-color: var(--color-pine);
+        }
+        .booking-papers {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
+          pointer-events: none;
+        }
+        .booking-paper {
+          position: absolute;
+          bottom: -7rem;
+          width: 4.5rem;
+          height: 5.75rem;
+          padding: 1rem 0.75rem;
+          border-radius: 0.35rem;
+          background: rgba(250, 248, 244, 0.72);
+          box-shadow: 0 10px 35px rgba(20, 24, 27, 0.2);
+          animation: paper-float 9s linear infinite;
+          will-change: transform, opacity;
+        }
+        .booking-paper::before {
+          content: "";
+          display: block;
+          width: 45%;
+          height: 0.28rem;
+          margin-bottom: 0.65rem;
+          border-radius: 999px;
+          background: rgba(184, 134, 63, 0.6);
+        }
+        .booking-paper i {
+          display: block;
+          height: 0.18rem;
+          margin-top: 0.4rem;
+          border-radius: 999px;
+          background: rgba(31, 61, 51, 0.22);
+        }
+        .booking-paper i:nth-child(2) { width: 78%; }
+        .booking-paper i:nth-child(3) { width: 55%; }
+        .booking-paper-1 { left: 5%; animation-delay: -1s; transform: rotate(-8deg); }
+        .booking-paper-2 { left: 18%; animation-delay: -6s; animation-duration: 11s; }
+        .booking-paper-3 { left: 34%; animation-delay: -3s; animation-duration: 10s; transform: rotate(7deg); }
+        .booking-paper-4 { left: 58%; animation-delay: -8s; animation-duration: 12s; }
+        .booking-paper-5 { left: 73%; animation-delay: -4s; animation-duration: 9.5s; transform: rotate(-6deg); }
+        .booking-paper-6 { left: 88%; animation-delay: -7s; animation-duration: 11.5s; }
+        .booking-paper-7 { left: 46%; animation-delay: -10s; animation-duration: 13s; transform: rotate(5deg); }
+        @keyframes paper-float {
+          0% { opacity: 0; transform: translate3d(0, 4rem, 0) rotate(-5deg); }
+          12% { opacity: 0.65; }
+          50% { transform: translate3d(1.5rem, -52vh, 0) rotate(5deg); }
+          88% { opacity: 0.45; }
+          100% { opacity: 0; transform: translate3d(-1rem, -112vh, 0) rotate(-7deg); }
+        }
+        @media (max-width: 640px) {
+          .booking-paper { width: 3.5rem; height: 4.5rem; opacity: 0.5; }
+          .booking-paper-2, .booking-paper-4, .booking-paper-6 { display: none; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .booking-papers { display: none; }
         }
       `}</style>
     </div>
