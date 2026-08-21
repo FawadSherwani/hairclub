@@ -3,13 +3,13 @@
 import { useEffect, useState } from "react";
 import { useBooking } from "@/lib/booking-context";
 
-const CITIES = ["Lahore", "Karachi", "Islamabad", "Faisalabad", "Multan"];
+const CITIES = [ "Faisalabad"];
 const SERVICES = [
-  "FUE Hair Transplant",
-  "DHI Hair Transplant",
-  "Beard / Eyebrow Transplant",
-  "PRP Therapy",
-  "Non-Surgical Hair Replacement",
+  "Custom Hair Unit",
+  "Lace Hair System",
+  "Skin Base Hair System",
+  "Hybrid Hair System",
+  "Refitting & Maintenance",
   "Not sure yet",
 ];
 
@@ -20,16 +20,10 @@ export default function BookingModal() {
     name: "",
     phone: "",
     city: CITIES[0],
-    service: SERVICES[0],
+    service: "",
     date: "",
     notes: "",
   });
-
-  useEffect(() => {
-    if (prefillService) {
-      setForm((f) => ({ ...f, service: prefillService }));
-    }
-  }, [prefillService]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -66,7 +60,7 @@ export default function BookingModal() {
         name: "",
         phone: "",
         city: CITIES[0],
-        service: SERVICES[0],
+        service: "",
         date: "",
         notes: "",
       });
@@ -115,7 +109,7 @@ export default function BookingModal() {
             </div>
             <h4 className="font-display text-xl text-ink mb-2">Request received</h4>
             <p className="text-sm text-clay max-w-xs mx-auto">
-              A patient coordinator will call {form.name || "you"} within one
+              A client coordinator will call {form.name || "you"} within one
               business day to confirm your slot in {form.city}.
             </p>
             <button
@@ -151,7 +145,7 @@ export default function BookingModal() {
             </Field>
 
             <div className="grid grid-cols-2 gap-4">
-              <Field label="Preferred clinic">
+              <Field label="Preferred studio">
                 <select name="city" value={form.city} onChange={handleChange} className="input">
                   {CITIES.map((c) => (
                     <option key={c} value={c}>{c}</option>
@@ -170,7 +164,7 @@ export default function BookingModal() {
             </div>
 
             <Field label="Interested in">
-              <select name="service" value={form.service} onChange={handleChange} className="input">
+              <select name="service" value={form.service || prefillService || SERVICES[0]} onChange={handleChange} className="input">
                 {SERVICES.map((s) => (
                   <option key={s} value={s}>{s}</option>
                 ))}
@@ -183,7 +177,7 @@ export default function BookingModal() {
                 value={form.notes}
                 onChange={handleChange}
                 rows={3}
-                placeholder="Hairline shape, area of concern, previous procedures..."
+                placeholder="Coverage area, preferred style, or questions about daily wear..."
                 className="input resize-none"
               />
             </Field>
@@ -196,7 +190,7 @@ export default function BookingModal() {
               {status === "submitting" ? "Sending..." : "Request consultation"}
             </button>
             <p className="text-[11px] text-clay text-center">
-              No payment required. We'll confirm by phone.
+              No payment required. We&apos;ll confirm by phone.
             </p>
           </form>
         )}

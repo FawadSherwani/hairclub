@@ -2,9 +2,9 @@ import Link from "next/link";
 import BeforeAfterCard from "./BeforeAfterCard";
 
 const PREVIEW = [
-  { label: "Natural lace base", category: "Breathable lace construction", grafts: "Lace", image: "/6.jpg" },
-  { label: "Secure perimeter system", category: "Reinforced bonding zones", grafts: "Hybrid", image: "/7.jpg" },
-  { label: "Full lace hair system", category: "Natural movement and coverage", grafts: "Full lace", image: "/8.jpg" },
+  { label: "Natural lace base", category: "Breathable lace construction", detail: "Lace", image: "/6.jpg" },
+  { label: "Secure perimeter system", category: "Reinforced bonding zones", detail: "Hybrid", image: "/7.jpg" },
+  { label: "Full lace hair system", category: "Natural movement and coverage", detail: "Full lace", image: "/8.jpg" },
 ];
 
 export default function GalleryPreview() {
@@ -17,7 +17,7 @@ export default function GalleryPreview() {
               Results
             </p>
             <h2 className="font-display text-3xl sm:text-4xl text-ink text-balance">
-              Outcomes, tracked against the original density plan
+              Hair units created for natural movement and confident wear
             </h2>
           </div>
           <Link

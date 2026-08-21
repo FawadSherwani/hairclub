@@ -1,10 +1,9 @@
-// Visual placeholder for a before/after result card. Real deployments should
-// swap the two panels for actual consented patient photography — the dot
-// density here only stands in for that until real images are supplied.
+// Visual placeholder for a result card. Real deployments should use consented
+// client photography; the dot pattern is a temporary density illustration.
 import Image from "next/image";
 import DensityMotif from "./DensityMotif";
 
-export default function BeforeAfterCard({ label, category, grafts, image }) {
+export default function BeforeAfterCard({ label, category, detail, image }) {
   return (
     <div className="rounded-2xl overflow-hidden border border-line bg-white">
       {image ? (
@@ -41,7 +40,7 @@ export default function BeforeAfterCard({ label, category, grafts, image }) {
           <p className="text-sm text-ink font-medium">{label}</p>
           <p className="text-xs text-clay mt-0.5">{category}</p>
         </div>
-        <span className="font-mono text-xs text-copper">{grafts}</span>
+        <span className="font-mono text-xs text-copper">{detail}</span>
       </div>
     </div>
   );

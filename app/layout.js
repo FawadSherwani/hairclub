@@ -17,9 +17,9 @@ import BookingModal from "@/components/BookingModal";
 import ContactDock from "@/components/ContactDock";
 
 export const metadata = {
-  title: "Hair & Hair Club — Precision-Mapped FUE & DHI",
+  title: "Hair & Hair Club | Non-Surgical Hair Units",
   description:
-    "Graft-density-mapped hair transplant clinic offering FUE, DHI, PRP therapy and non-surgical hair replacement across Pakistan.",
+    "Custom non-surgical hair units, natural hair systems, professional fitting, styling, and maintenance in Faisalabad, Pakistan.",
 };
 
 export default function RootLayout({ children }) {

@@ -80,11 +80,11 @@ export default function ContactPage() {
                       <span className="text-xs font-medium text-ink/70">Select your service</span>
                       <select className="contact-input" defaultValue="">
                         <option value="" disabled>Choose a service</option>
-                        <option>FUE Hair Transplant</option>
-                        <option>DHI Hair Transplant</option>
-                        <option>Beard / Eyebrow Transplant</option>
-                        <option>PRP Therapy</option>
-                        <option>Non-Surgical Hair Replacement</option>
+                        <option>Custom Hair Unit</option>
+                        <option>Lace Hair System</option>
+                        <option>Skin Base Hair System</option>
+                        <option>Hybrid Hair System</option>
+                        <option>Refitting &amp; Maintenance</option>
                         <option>Not sure yet</option>
                       </select>
                     </label>
@@ -104,7 +104,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <h2 className="font-display text-xl text-ink mb-6">Our clinics</h2>
+              <h2 className="font-display text-xl text-ink mb-6">Our studio</h2>
               <ul className="flex flex-col gap-6">
                 {LOCATIONS.map((loc) => (
                   <li key={loc.city} className="border-b border-line pb-6 last:border-0">
@@ -134,7 +134,7 @@ export default function ContactPage() {
               <div className="mt-6 rounded-2xl overflow-hidden border border-line aspect-[4/3]">
                 <iframe
                   key={selectedCity}
-                  title={`${selectedCity} clinic location map`}
+                  title={`${selectedCity} studio location map`}
                   src={mapSrc}
                   className="w-full h-full border-0"
                   loading="lazy"

@@ -1,7 +1,6 @@
 // Signature visual: a grid of dots that thins from dense (left) to sparse
-// (right), or reverse. This mirrors the actual clinical concept of graft
-// density mapping used to plan a transplant, so it doubles as a recurring
-// diagram rather than decoration.
+// (right), or reverse. It represents the density transition used to create a
+// natural-looking custom hair unit.
 export default function DensityMotif({
   rows = 8,
   cols = 22,

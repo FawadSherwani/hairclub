@@ -16,7 +16,7 @@ export default function Footer() {
             Hair &amp; Hair Club
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-paper/65">
-            Personalized hair restoration and non-surgical hair replacement in Faisalabad.
+            Custom non-surgical hair units, professional fitting, styling, and maintenance in Faisalabad.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export default function Footer() {
 
         <div>
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-copper-light">
-            Faisalabad clinic
+            Faisalabad studio
           </p>
           <address className="mt-4 text-sm not-italic leading-relaxed text-paper/70">
             Near McDonald&apos;s, Salami Chowk<br />
