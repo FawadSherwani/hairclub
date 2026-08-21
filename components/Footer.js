@@ -42,9 +42,7 @@ export default function Footer() {
             Near McDonald&apos;s, Salami Chowk<br />
             Satiana Road, Faisalabad
           </address>
-          <a href="tel:+923057679198" className="mt-3 inline-block text-sm text-paper transition-colors hover:text-copper-light">
-            0305-7679198
-          </a>
+          
           <div className="mt-4 flex flex-col items-start gap-2">
             <a href="https://wa.me/923057679198" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-paper/70 transition-colors hover:text-copper-light" aria-label="WhatsApp 0305-7679198">
               <WhatsAppIcon className="h-5 w-5" />
@@ -52,7 +50,7 @@ export default function Footer() {
             </a>
             <a href="https://wa.me/923007291096" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-paper/70 transition-colors hover:text-copper-light" aria-label="WhatsApp +92 300 7291096">
               <WhatsAppIcon className="h-5 w-5" />
-              +92 300 7291096
+              0300-7291096
             </a>
           </div>
         </div>
