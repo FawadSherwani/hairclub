@@ -2,9 +2,10 @@ import Link from "next/link";
 import BeforeAfterCard from "./BeforeAfterCard";
 
 const PREVIEW = [
-  { label: "Natural lace base", category: "Breathable lace construction", detail: "Lace", image: "/6.jpg" },
-  { label: "Secure perimeter system", category: "Reinforced bonding zones", detail: "Hybrid", image: "/7.jpg" },
-  { label: "Full lace hair system", category: "Natural movement and coverage", detail: "Full lace", image: "/8.jpg" },
+  // Add your own photos to /public, then change these before and after paths.
+  { label: "Natural lace base", category: "Breathable lace construction", detail: "Lace", beforeImage: "/3.jpg", afterImage: "/6.jpg" },
+  { label: "Secure perimeter system", category: "Reinforced bonding zones", detail: "Hybrid", beforeImage: "/4.jpg", afterImage: "/7.jpg" },
+  { label: "Full lace hair system", category: "Natural movement and coverage", detail: "Full lace", beforeImage: "/5.jpg", afterImage: "/8.jpg" },
 ];
 
 export default function GalleryPreview() {
@@ -14,7 +15,7 @@ export default function GalleryPreview() {
         <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
           <div className="max-w-xl">
             <p className="text-xs uppercase tracking-[0.2em] text-copper font-medium mb-4">
-              Results
+              Our Work
             </p>
             <h2 className="font-display text-3xl sm:text-4xl text-ink text-balance">
               Hair units created for natural movement and confident wear
@@ -24,7 +25,7 @@ export default function GalleryPreview() {
             href="/gallery"
             className="text-sm text-pine underline underline-offset-4 decoration-line hover:decoration-pine"
           >
-            View full gallery →
+            View our work &rarr;
           </Link>
         </div>
 

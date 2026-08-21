@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 const PHONE = "+923057679198";
+const SECOND_PHONE = "+923007291096";
 
 function EmailIcon() {
   return (
@@ -22,22 +24,15 @@ function PhoneIcon() {
   );
 }
 
-function WhatsAppIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7" fill="currentColor">
-      <path d="M12 2a9.7 9.7 0 0 0-8.4 14.6L2.3 22l5.6-1.3A9.8 9.8 0 1 0 12 2Zm0 17.7c-1.4 0-2.8-.4-4-1.1l-.3-.2-3.3.8.8-3.2-.2-.3A7.7 7.7 0 1 1 12 19.7Zm4.2-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.7.9c-.1.2-.3.2-.5.1-1.3-.5-2.4-1.5-3.1-2.7-.2-.3.2-.6.5-1 .1-.2.1-.4 0-.6L9.5 8c-.2-.5-.5-.4-.7-.4h-.5c-.2 0-.5.1-.8.4-.9 1-.9 2.4-.1 3.8 1.3 2.4 3.3 4.2 5.8 5.1 1.8.6 2.5.4 3.4-.4.5-.4.8-1.1.9-1.8.1-.3 0-.5-.2-.6l-1.1-.2Z" />
-    </svg>
-  );
-}
-
 const actions = [
   { label: "Email", href: "/contact", color: "bg-blue-600", icon: <EmailIcon /> },
   { label: "Call Now", href: `tel:${PHONE}`, color: "bg-emerald-600", icon: <PhoneIcon /> },
   { label: "WhatsApp", href: `https://wa.me/${PHONE.slice(1)}`, color: "bg-green-500", icon: <WhatsAppIcon />, external: true },
+  { label: "WhatsApp", href: `https://wa.me/${SECOND_PHONE.slice(1)}`, color: "bg-green-500", icon: <WhatsAppIcon />, external: true },
 ];
 
 export default function ContactDock() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <aside className="fixed bottom-5 right-4 sm:bottom-7 sm:right-7 z-50 flex flex-col items-end gap-3" aria-label="Quick contact options">

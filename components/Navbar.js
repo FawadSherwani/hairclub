@@ -3,13 +3,19 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useBooking } from "@/lib/booking-context";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/gallery", label: "Results" },
+  { href: "/gallery", label: "Our Work" },
   { href: "/contact", label: "Contact" },
+];
+
+const WHATSAPP_NUMBERS = [
+  { label: "0305-7679198", value: "923057679198" },
+  { label: "0300-7291096", value: "923007291096" },
 ];
 
 export default function Navbar() {
@@ -50,12 +56,21 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <a
-            href="tel:+923057679198"
-            className="hidden lg:inline text-sm text-clay hover:text-pine transition-colors"
-          >
-            0305-7679198
-          </a>
+          <div className="hidden lg:flex flex-col gap-1">
+            {WHATSAPP_NUMBERS.map((phone) => (
+              <a
+                key={phone.value}
+                href={`https://wa.me/${phone.value}`}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-1.5 text-xs text-clay hover:text-green-600 transition-colors"
+                aria-label={`WhatsApp ${phone.label}`}
+              >
+                <WhatsAppIcon className="h-4 w-4" />
+                {phone.label}
+              </a>
+            ))}
+          </div>
           <button
             onClick={() => openBooking()}
             className="hidden sm:inline-flex items-center gap-2 bg-pine text-paper text-sm px-5 py-2.5 rounded-full hover:bg-pine-light transition-colors"
@@ -92,6 +107,22 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <div className="border-t border-line pt-4 flex flex-col gap-3">
+            {WHATSAPP_NUMBERS.map((phone) => (
+              <a
+                key={phone.value}
+                href={`https://wa.me/${phone.value}`}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="flex items-center gap-2 text-sm text-ink hover:text-green-600 transition-colors"
+                aria-label={`WhatsApp ${phone.label}`}
+              >
+                <WhatsAppIcon className="h-5 w-5" />
+                {phone.label}
+              </a>
+            ))}
+          </div>
           <button
             onClick={() => {
               setMenuOpen(false);
